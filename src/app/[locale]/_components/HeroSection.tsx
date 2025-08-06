@@ -78,6 +78,7 @@ export default function HeroSection() {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <Image
+              priority
               src={slide.image}
               alt={slide.title}
               className="slide-image absolute w-full h-full object-cover top-0 left-0"

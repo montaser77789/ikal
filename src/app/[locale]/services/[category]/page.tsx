@@ -61,6 +61,7 @@ export default async function ServiceCategoryPage({
               >
                 <div className="relative h-60 overflow-hidden">
                   <Image
+                    priority
                     src={service.image}
                     alt={service.title}
                     fill
