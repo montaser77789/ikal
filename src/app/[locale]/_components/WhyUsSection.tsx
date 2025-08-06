@@ -76,8 +76,7 @@ export default function WhyUsSection() {
         {/* بطاقات المميزات */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
           {features.map((feature, index) => (
-            <a
-              href={feature.link}
+            <div
               key={index}
               className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 h-96"
               data-aos="fade-up"
@@ -114,7 +113,7 @@ export default function WhyUsSection() {
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
