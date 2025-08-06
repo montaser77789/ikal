@@ -30,33 +30,24 @@ const services = [
       "نمتلك خبرة واسعة في إنشاء وتطوير المجمعات التجارية والمكاتب الإدارية، بالإضافة إلى بناء المستودعات والمصانع. نضمن حلولاً متكاملة تلبي احتياجات القطاعات التجارية والصناعية، مع الالتزام بالدقة في المواعيد والكفاءة في التنفيذ.",
     image: image3,
   },
-  {
-    id: 4,
-    title: "المشروعات الصناعية",
-    description:
-      "نتخصص في تصميم وتنفيذ المنشآت الصناعية وتطوير مناطق الصناعات الثقيلة، من خلال استخدام أحدث تقنيات البناء الصناعي. نهدف إلى تقديم بيئة تشغيلية متطورة تدعم الكفاءة والإنتاجية وتواكب تطلعات القطاع الصناعي في المملكة.",
-    image: image4,
-  },
 ];
 
-
 export default function ServicesSection() {
-
-
-
   return (
-    <section id="services" className="py-20 bg-gradient-to-b from-gray-50 to-white" dir="rtl">
+    <section
+      id="services"
+      className="py-20 bg-gradient-to-b from-gray-50 to-white"
+      dir="rtl"
+    >
       <div className="container ">
         <Sectiontitle
           title="عالم خدماتنا"
           description="اكتشف حلولنا المبتكرة التي تتجاوز التوقعات"
         />
-        
-        <div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16"
-        >
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
           {services.map((service, index) => (
-            <div key={index} >
+            <div key={index}>
               <ServiceCard
                 id={service.id}
                 title={service.title}
@@ -71,12 +62,15 @@ export default function ServicesSection() {
         <div className="mt-20 relative">
           <div className="absolute -left-20 top-1/2 transform -translate-y-1/2 w-40 h-40 rounded-full bg-blue-200 opacity-20 blur-3xl"></div>
           <div className="absolute -right-20 bottom-0 w-40 h-40 rounded-full bg-orange-200 opacity-20 blur-3xl"></div>
-          
+
           <div className="relative bg-white p-8 rounded-3xl shadow-xl border border-gray-100 text-center max-w-6xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">رؤيتنا تتجاوز البناء</h3>
+            <h3 className="text-2xl font-bold text-gray-800 mb-4">
+              رؤيتنا تتجاوز البناء
+            </h3>
             <p className="text-gray-600 leading-relaxed">
-              نخلق مساحات تلهم وتحفز وتثري حياة الناس. كل مشروع هو قصة نجاح نصنعها معاً، 
-              حيث ندمج الإبداع مع الدقة الهندسية لتحقيق رؤى عملائنا.
+              نخلق مساحات تلهم وتحفز وتثري حياة الناس. كل مشروع هو قصة نجاح
+              نصنعها معاً، حيث ندمج الإبداع مع الدقة الهندسية لتحقيق رؤى
+              عملائنا.
             </p>
           </div>
         </div>
