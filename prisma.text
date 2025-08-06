@@ -1,0 +1,14 @@
+model ServiceCategory {
+  id          Int       @id @default(autoincrement())
+  name        String
+  description String
+  services    Service[]
+}
+
+model Service {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String
+  category    ServiceCategory @relation(fields: [categoryId], references: [id])
+  categoryId  Int
+}
