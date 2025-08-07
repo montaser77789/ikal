@@ -12,7 +12,6 @@ import {
 } from "react-icons/fa";
 import { 
   GiModernCity,
-
 } from "react-icons/gi";
 
 // صور الخلفيات
@@ -62,14 +61,14 @@ export default function WhyUsSection() {
   ];
 
   return (
-    <section className="py-8 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* عناصر زخرفية */}
       <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-primary/10 blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-yellow-400/10 blur-3xl"></div>
 
-      <div className="container">
+      <div className="container mx-auto px-4">
         <Sectiontitle
-          title="لماذا تختار ايكال؟"
+          title="لماذا تختار إيكال؟"
           description="نقدم حلولاً هندسية متكاملة تجمع بين الإبداع والدقة لتحقيق رؤيتك"
         />
         
@@ -90,24 +89,25 @@ export default function WhyUsSection() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   quality={90}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
               </div>
 
-              {/* المحتوى */}
+              {/* المحتوى - يعمل على جميع الأجهزة */}
               <div className="relative h-full flex flex-col justify-end p-6 text-white">
-                <div className="absolute top-6 right-6 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:bg-primary transition-all duration-300">
+                <div className="absolute top-6 right-6 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:bg-primary transition-all duration-300 md:group-hover:bg-primary">
                   <div className="text-2xl text-white">
                     {feature.icon}
                   </div>
                 </div>
 
-                <div className="transform translate-y-10 group-hover:translate-y-0 transition-all duration-500">
+                <div className="transform translate-y-0 md:translate-y-10 md:group-hover:translate-y-0 transition-all duration-500">
                   <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-                  <p className="text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200 mb-4">
+                  <p className="text-lg opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 delay-200 mb-4">
                     {feature.description}
                   </p>
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-300 flex items-center gap-2 text-sm font-medium">
+                  <div className="opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 delay-300 flex items-center gap-2 text-sm font-medium">
                     <span>المزيد من التفاصيل</span>
                     <FaArrowLeft className="text-xs" />
                   </div>
@@ -117,6 +117,16 @@ export default function WhyUsSection() {
           ))}
         </div>
       </div>
+
+      {/* ستايل مخصص لتحسين العرض على الموبايل */}
+      <style jsx global>{`
+        @media (max-width: 768px) {
+          .h-96 {
+            height: auto;
+            min-height: 320px;
+          }
+        }
+      `}</style>
     </section>
   );
 }

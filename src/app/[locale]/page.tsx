@@ -1,7 +1,9 @@
+import CallToAction from "@/components/CallToAction";
 import HeroSection from "./_components/HeroSection";
 import HomeAbout from "./_components/HomeAbout";
 import OurPartners from "./_components/OurPartners";
 import ServicesSection from "./_components/ServicesSection";
+import TestimonialsSlider from "./_components/TestimonialsSlider";
 import WhyUsSection from "./_components/WhyUsSection";
 
 export default function Home() {
@@ -12,6 +14,8 @@ export default function Home() {
       <HomeAbout />
       <ServicesSection />
       <WhyUsSection />
+      <TestimonialsSlider />
+      <CallToAction />
     </main>
   );
 }
