@@ -17,6 +17,8 @@ export enum Routes {
 export enum Pages {
   HOME = "home",
   LOGIN = "signin",
+  PROJECTS = "projects",
+  CONTACT = "contact",
 }
 
 export enum InputTypes {

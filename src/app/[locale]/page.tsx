@@ -5,6 +5,8 @@ import OurPartners from "./_components/OurPartners";
 import ServicesSection from "./_components/ServicesSection";
 import TestimonialsSlider from "./_components/TestimonialsSlider";
 import WhyUsSection from "./_components/WhyUsSection";
+import ProjectsPreviewSection from "./_components/ProjectsPreviewSection";
+import FAQSection from "./_components/FAQSection";
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       <ServicesSection />
       <WhyUsSection />
       <TestimonialsSlider />
+      <ProjectsPreviewSection />
+      <FAQSection />
       <CallToAction />
     </main>
   );

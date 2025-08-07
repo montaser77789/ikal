@@ -11,7 +11,7 @@ import {
   FaIndustry,
   FaCity,
   FaHardHat,
-  FaChartLine,
+
 } from "react-icons/fa";
 import { GiCommercialAirplane } from "react-icons/gi";
 import Sectiontitle from "@/components/Sectiontitle";
@@ -64,7 +64,7 @@ const testimonials = [
 export default function TestimonialsSlider() {
   return (
     <section
-      className="bg-gradient-to-b from-white to-gray-50 py-8 relative overflow-hidden"
+      className="bg-gradient-to-b from-white to-gray-50 py-8 relative overflow-hidden "
       dir="rtl"
     >
       {/* عناصر زخرفية */}

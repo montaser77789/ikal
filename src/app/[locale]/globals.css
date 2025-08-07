@@ -125,3 +125,37 @@ body , html {
   font-size: 20px !important;
   font-weight: bold !important;
 }
+
+/* تغيير شريط التمرير لجميع العناصر */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* الخلفية العامة لشريط التمرير */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* الجزء المتحرك من شريط التمرير */
+::-webkit-scrollbar-thumb {
+  background: var(--primary); /* لون أزرق مشابه للون primary */
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+/* تغيير لون الشريط عند hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #8a8747; /* لون أزرق أغمق */
+}
+
+/* تغيير شريط التمرير للعناصر الداخلية */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 4px;
+}

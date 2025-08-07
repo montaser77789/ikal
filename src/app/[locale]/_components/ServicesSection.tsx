@@ -5,7 +5,6 @@ import ServiceCard from "./ServiceCard";
 import image1 from "../../../../public/services/aerial-view-traffic-massive-highway-intersection (1).jpg";
 import image2 from "../../../../public/services/analog-landscape-city-with-buildings.jpg";
 import image3 from "../../../../public/services/futuristic-landscape-dubai (1).jpg";
-import image4 from "../../../../public/services/31814 (1).jpg";
 import Sectiontitle from "@/components/Sectiontitle";
 
 const services = [

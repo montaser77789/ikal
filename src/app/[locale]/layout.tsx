@@ -6,6 +6,7 @@ import getTrans from "@/lib/translation";
 import { Locale } from "@/i18n.config";
 import NextAuthSessionProvider from "@/providers/NextAuthSessionProvider";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const alexandria = Alexandria({
   subsets: ["arabic", "latin"],
@@ -35,6 +36,7 @@ export default async function RootLayout({
         <NextAuthSessionProvider>
           <Header locale={locale} translation={translations} />
           {children}
+          <Footer />
         </NextAuthSessionProvider>
       </body>
     </html>
