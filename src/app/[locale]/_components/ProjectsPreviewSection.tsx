@@ -69,7 +69,7 @@ export default function ProjectsPreviewSection() {
       <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-primary/10 blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-yellow-400/10 blur-3xl"></div>
 
-      <div className="container px-4 mx-auto">
+      <div className="container ">
         <Sectiontitle
           title="إنجازاتنا"
           description="نماذج مميزة من مشاريعنا التي نفخر بتنفيذها"

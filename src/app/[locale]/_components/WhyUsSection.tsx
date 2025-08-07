@@ -61,7 +61,7 @@ export default function WhyUsSection() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden ">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden container">
       {/* عناصر زخرفية */}
       <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-primary/10 blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-yellow-400/10 blur-3xl"></div>

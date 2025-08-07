@@ -64,14 +64,14 @@ const testimonials = [
 export default function TestimonialsSlider() {
   return (
     <section
-      className="bg-gradient-to-b from-white to-gray-50 py-8 relative overflow-hidden "
+      className="bg-gradient-to-b from-white to-gray-50 py-8 relative overflow-hidden  "
       dir="rtl"
     >
       {/* عناصر زخرفية */}
       <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-primary/10 blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-yellow-400/10 blur-3xl"></div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container relative z-10">
         <Sectiontitle
           title="شهادات شركائنا"
           description="تعرف على ما يقوله عملاؤنا عن تجربة العمل معنا وجودة تنفيذ المشاريع"
