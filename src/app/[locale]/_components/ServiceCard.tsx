@@ -1,71 +1,31 @@
-// components/ServiceCard.tsx
 "use client";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image, { StaticImageData } from "next/image";
-import { Button } from "@/components/ui/button";
-import Link from "@/components/link/Link";
-import { useParams } from "next/navigation";
-import { FaArrowRightLong } from "react-icons/fa6";
-
-interface Props {
-  title: string;
-  description: string;
-  image: string | StaticImageData;
-  id?: number;
-}
-
 export default function ServiceCard({
   title,
   description,
   image,
-  id,
-}: Props) {
-  const { locale } = useParams();
-
+}: {
+  title: string;
+  description: string;
+  image: StaticImageData;
+}) {
   return (
-    <div className="h-full">
-      <Card
-        className={`rounded-3xl !p-0 overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col `}
-      >
-        <div className="relative h-[200px] overflow-hidden">
-          <Image
-            src={image}
-            alt={title}
-            fill
-            className="object-cover transition-transform duration-500 hover:scale-110"
-          />
+    <div className="flex flex-col justify-center items-center text-center rounded-2xl p-4 sm:p-2 relative mb-26">
+      <div className="w-full h-60 relative">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className="rounded-2xl w-full h-full object-cover"
+        />
+      </div>
 
-        </div>
 
-        <CardHeader className="!pb-0">
-          <CardTitle className="text-gray-800 text-2xl font-bold">
-            {title}
-          </CardTitle>
-        </CardHeader>
-
-        <CardContent className="flex flex-col justify-between flex-grow pt-0">
-          <p className="text-gray-600 leading-relaxed text-xl  mb-2">
-            {description}
-          </p>
-
-          <div className="mt-auto  pb-4">
-            <Button
-              asChild
-              variant="link"
-              className="p-0 text-primary hover:text-primary/80"
-            >
-              <Link
-                href={`/${locale}/services/${id}`}
-                className="flex items-center gap-2 justify-center "
-              >
-                <span>استكشف المزيد</span>
-               <FaArrowRightLong className={`text-primary ${locale === "ar" ? "rotate-180" : ""}`} />
-
-              </Link>
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+      {/* صندوق المحتوى */}
+      <div className="bg-primary text-white w-[90%]  shadow-lg rounded-2xl py-2 min-h-[100px] mb-5 absolute bottom-[-160px] px-2">
+        <h2 className="text-md text-white md:text-xl font-bold mt-2 ">{title}</h2>
+        <p className="text-md md:text-sm  leading-relaxed  text-white font-semibold pb-3 ">{description}</p>
+      </div>
     </div>
   );
 }

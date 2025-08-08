@@ -3,6 +3,7 @@
 import { useParams, usePathname, useRouter } from "next/navigation";
 import { Languages } from "../constants/enum";
 import { Button } from "../ui/button";
+import { Globe } from "lucide-react"; // أيقونة الكرة الأرضية
 
 const LanguageSwitcher = () => {
   const router = useRouter();
@@ -19,7 +20,8 @@ const LanguageSwitcher = () => {
     <div className="flex">
       <Button
         variant="ghost"
-        className="text-primary bg-white"
+        className="flex items-center gap-2 text-xl text-primary md:text-white hover:text-white transition-colors duration-300 
+        hover:!bg-transparent" 
         onClick={() =>
           switchLanguage(
             locale === Languages.ARABIC ? Languages.ENGLISH : Languages.ARABIC
@@ -27,7 +29,8 @@ const LanguageSwitcher = () => {
         }
         aria-label="Toggle language"
       >
-        {locale === Languages.ARABIC ? "English" : "العربيه"}
+        <Globe className="!w-7 !h-7 " size={32} /> 
+        <span>{locale === Languages.ARABIC ? "English" : "العربية"}</span>
       </Button>
     </div>
   );

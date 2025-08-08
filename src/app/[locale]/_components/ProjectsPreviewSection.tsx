@@ -71,7 +71,7 @@ export default function ProjectsPreviewSection() {
 
       <div className="container ">
         <Sectiontitle
-          title="إنجازاتنا"
+          title="مشاريعنا في ارتكس"
           description="نماذج مميزة من مشاريعنا التي نفخر بتنفيذها"
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">

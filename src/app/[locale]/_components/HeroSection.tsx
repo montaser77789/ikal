@@ -1,120 +1,84 @@
-// app/components/HeroSlider.tsx
 "use client";
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay, EffectCoverflow } from "swiper/modules";
+import { Autoplay, EffectFade } from "swiper/modules";
+
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+
 import image1 from "../../../../public/hero section/93952dc9cc684e057292c349c21618c5cfc4e9fb.jpg";
-import image2 from "../../../../public/hero section//observation-urban-building-business-steel.jpg";
-import image3 from "../../../../public/hero section/workers-examining-work.jpg";
+import image2 from "../../../../public/hero section/observation-urban-building-business-steel.jpg";
+import image3 from "../../../../public/hero section/monochrome-scene-depicting-life-workers-construction-industry-site.jpg";
+
 import Image from "next/image";
 import Link from "@/components/link/Link";
 import { buttonVariants } from "@/components/ui/button";
 
-const slides = [
-  {
-    title: "إيكال للمقاولات",
-    subtitle:
-      "منذ تأسيسها، تسعى شركة إيكال لتقديم أفضل الخدمات والحلول في مجال المقاولات، برؤية تركز على الابتكار والجودة.",
-    image: image2,
-    primaryLink: "#contact",
-    primaryText: "تواصل معنا",
-    secondaryLink: "#about",
-    secondaryText: "عن الشركة",
-  },
-  {
-    title: "نتميز بالجودة والدقة",
-    subtitle:
-      "نلتزم بتنفيذ المشاريع بأعلى معايير الجودة والدقة، مستثمرين في الأفراد والتكنولوجيا لنضمن تقديم الأفضل دائمًا.",
-    image: image1,
-    primaryLink: "#services",
-    primaryText: "خدماتنا",
-    secondaryLink: "#certificates",
-    secondaryText: "شهاداتنا",
-  },
-  {
-    title: "الابتكار هو طريقنا",
-    subtitle:
-      "نستخدم أحدث الحلول التكنولوجية والتصميمات ثلاثية الأبعاد والبناء الذكي لنحقق الكفاءة والاستدامة في مشاريعنا.",
-    image: image3,
-    primaryLink: "#tech",
-    primaryText: "ابتكاراتنا",
-    secondaryLink: "#projects",
-    secondaryText: "مشاريعنا",
-  },
-];
+const slides = [image1, image2, image3];
 
 export default function HeroSection() {
   return (
-    <div className="hero-slider relative h-screen overflow-hidden" dir="rtl">
+    <div className="relative h-screen w-full overflow-hidden" >
+      {/* Swiper background images */}
       <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        initialSlide={2}
-        slidesPerView={"auto"}
+        modules={[Autoplay, EffectFade]}
         autoplay={{
-          delay: 3000,
+          delay: 3000, // زدت المدة بين الشرائح
           disableOnInteraction: false,
         }}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 300,
-          modifier: 1,
-          slideShadows: true,
+        effect="fade"
+        fadeEffect={{
+          crossFade: true // تأثير تدرج متقاطع
         }}
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        }}
-        modules={[EffectCoverflow, Navigation, Autoplay]}
-        className="h-[650px] md:h-screen"
+        speed={1500} // زدت مدة الانتقال بين الشرائح
+        loop
+        className="absolute top-0 left-0 w-full h-full z-0"
       >
-        {slides.map((slide, index) => (
+        {slides.map((image, index) => (
           <SwiperSlide key={index}>
-            <Image
-              priority
-              src={slide.image}
-              alt={slide.title}
-              className="slide-image absolute w-full h-full object-cover top-0 left-0"
-            />
-            <div className="slide-overlay absolute w-full h-full bg-black/55 z-10" />
-            <div className=" relative z-20 h-full flex flex-col justify-center items-center px-[10%] text-white  mx-auto">
-              <h2 className="text-[30px] md:text-[40px] lg:text-[50px] xl:text-[60px] 2xl:text-[70px]  font-bold mb-6 text-primary drop-shadow-md transition-all ">
-                {slide.title}
-              </h2>
-              <p className="text-[18px] md:text-[30px] lg:text-[40px]   max-w-4xl text-center leading-loose mb-10 transition-all">
-                {slide.subtitle}
-              </p>
-              <div className="slide-buttons flex gap-6 transition-all">
-                <Link
-                  href={slide.primaryLink}
-                  className={`  !text-xl  !py-5 !px-7  ${buttonVariants({
-                    variant: "default",
-                  })}`}
-                >
-                  {slide.primaryText}
-                </Link>
-                <Link
-                  href={slide.secondaryLink}
-                  className={` !text-xl  !py-5 !px-7   ${buttonVariants({
-                    variant: "outline",
-                  })}`}
-                >
-                  {slide.secondaryText}
-                </Link>
-              </div>
+            <div className="relative w-full h-screen">
+              <Image
+                src={image}
+                alt={`Slide ${index}`}
+                fill
+                className="object-cover transition-all duration-1000"
+                priority
+              />
+              <div className="absolute inset-0 bg-black/50 z-10" />
             </div>
-            <div className="swiper-button-prev !top-auto  after:!text-white after:!text-2xl"></div>
-            <div className="swiper-button-next !top-auto  after:!text-white after:!text-2xl"></div>
           </SwiperSlide>
         ))}
       </Swiper>
+
+      {/* Fixed text overlay */}
+      <div className="absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 h-full flex flex-col justify-center items-center text-white text-center px-6 md:px-[10%]">
+        <h2 className="text-[30px] md:text-[40px] lg:text-[50px] xl:text-[60px] 2xl:text-[70px] font-bold mb-6 drop-shadow-md text-primary animate-fadeIn">
+          مجموعه إيكال
+        </h2>
+        <p className="text-[18px] md:text-[30px] lg:text-[40px] max-w-4xl leading-relaxed mb-10 animate-fadeIn delay-200">
+          منذ تأسيسها، تسعى شركة إيكال لتقديم أفضل الخدمات والحلول في مجال
+          المقاولات، برؤية تركز على الابتكار والجودة.
+        </p>
+        <div className="flex gap-6 animate-fadeIn delay-300">
+          <Link
+            href="#contact"
+            className={`!text-xl !py-5 !px-10 ${buttonVariants({
+              variant: "default",
+            })}`}
+          >
+            تواصل معنا
+          </Link>
+          <Link
+            href="#about"
+            className={`!text-xl !py-5 !px-10 ${buttonVariants({
+              variant: "outline",
+            })}`}
+          >
+            عن الشركة
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

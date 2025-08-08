@@ -33,16 +33,17 @@ const Header = ({
           : "bg-gradient-to-b from-black/10 to-transparent py-4"
       }`}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center py-3">
+
+      <div className="container  flex justify-between items-center py-3">
         {/* Logo */}
         <div className="flex items-center">
-          <div className="p-1 rounded-full bg-[#c49a6c]/80">
-            <div className="p-1 rounded-full bg-white">
+          <div className="p-1 rounded-full">
+            <div className="">
               <Image
                 src={logo}
                 alt="Logo"
-                width={80}
-                height={80}
+                width={90}
+                height={90}
                 className="object-contain"
               />
             </div>

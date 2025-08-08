@@ -1,6 +1,6 @@
 // components/Navbar.tsx
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaBars, FaChevronDown, FaTimes } from "react-icons/fa";
 import LanguageSwitcher from "./language-switcher";
 import Link from "../link/Link";
@@ -14,6 +14,15 @@ const Navbar = ({
   translations: Translations;
   locale: Locale;
 }) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -73,7 +82,7 @@ const Navbar = ({
         <ul className="flex gap-1">
           {links.map((link) => (
             <li key={link.id}>
-              <a
+              <Link
                 href={link.href}
                 className={`px-4 py-2 rounded-full  text-lg
                     transition-all duration-300 flex items-center text-white hover:bg-white/20  
@@ -83,7 +92,7 @@ const Navbar = ({
                 {["خدماتنا", "مشاريعنا", "Services", "Projects"].includes(
                   link.title
                 ) && <FaChevronDown className="mr-1 text-xs" />}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

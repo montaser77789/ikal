@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Alexandria } from "next/font/google";
+import { Cairo } from "next/font/google";
 import "./globals.css";
 import { Directions, Languages } from "@/components/constants/enum";
 import getTrans from "@/lib/translation";
@@ -7,10 +7,9 @@ import { Locale } from "@/i18n.config";
 import NextAuthSessionProvider from "@/providers/NextAuthSessionProvider";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-
-const alexandria = Alexandria({
-  subsets: ["arabic", "latin"],
-  variable: "--font-alexandria",
+const cairo = Cairo({
+  subsets: ["arabic"],
+  weight: ["400", "600", "700"],
   display: "swap",
 });
 export const metadata: Metadata = {
@@ -32,7 +31,7 @@ export default async function RootLayout({
   const translations = await getTrans(locale);
   return (
     <html lang={locale} dir={isArabic ? Directions.RTL : Directions.LTR}>
-      <body className={`${alexandria.variable} antialiased`}>
+      <body className={`${cairo.className} {font-sans}  antialiased`}>
         <NextAuthSessionProvider>
           <Header locale={locale} translation={translations} />
           {children}

@@ -17,7 +17,7 @@ import { Pages } from "@/components/constants/enum";
 
 const faqs = [
   {
-    question: "ما هي مجالات العمل التي تغطيها شركة إيكال؟",
+    question: "ما هي مجالات العمل التي تغطيها مجموعة  إيكال؟",
     answer:
       "نحن متخصصون في مشاريع البنية التحتية، الإنشاءات السكنية والتجارية، المشاريع الصناعية، وأعمال التطوير العمراني. لدينا فريق من الخبراء في كل مجال لضمان تنفيذ مشاريعنا بأعلى معايير الجودة.",
   },
@@ -99,19 +99,6 @@ export default function FAQSection() {
                     <span className="flex-1 text-right text-xl md:text-2xl font-bold text-gray-800 group-hover:text-primary transition-colors">
                       {faq.question}
                     </span>
-                    <svg
-                      className="h-6 w-6 shrink-0 text-primary transition-transform duration-200"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-                      <path
-                        d="M14 12L10 8L6 12"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
                   </AccordionTrigger>
                   <AccordionContent className="px-8 py-6 text-lg md:text-xl text-gray-700 bg-gray-50 leading-relaxed">
                     {faq.answer}

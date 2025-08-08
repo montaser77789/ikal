@@ -17,7 +17,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-primary text-white pt-16 pb-8" dir="rtl">
-      <div className="container mx-auto px-4">
+      <div className="container ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           
           {/* معلومات الشركة */}
@@ -32,7 +32,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-white leading-relaxed">
-              شركة إيكال للمقاولات العامة - تقدم حلولاً متكاملة في مجال الإنشاءات والبنية التحتية بجودة عالية واحترافية.
+              مجموعة إيكال للمقاولات العامة - تقدم حلولاً متكاملة في مجال الإنشاءات والبنية التحتية بجودة عالية واحترافية.
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-white hover:text-white transition">
@@ -61,7 +61,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/about" className="text-white hover:text-white transition">
-                  عن الشركة
+                  عن مجموعة
                 </Link>
               </li>
               <li>

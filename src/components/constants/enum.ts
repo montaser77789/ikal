@@ -19,6 +19,7 @@ export enum Pages {
   LOGIN = "signin",
   PROJECTS = "projects",
   CONTACT = "contact",
+  CERTIFICATES = "certificates",
 }
 
 export enum InputTypes {
