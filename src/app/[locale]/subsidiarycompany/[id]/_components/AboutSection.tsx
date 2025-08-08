@@ -1,12 +1,21 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Image from "next/image";
 import "aos/dist/aos.css";
 import { Globe, HardHat } from "lucide-react";
 import aboutImage from "../../../../../../public/why us/abu-dhabi-seascape-with-skyscrapers.jpg";
 
 export default function AboutSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 300,
+      once: true,
+      easing: "ease-out-quad",
+    });
+  }, []);
   return (
     <section
       id="about"

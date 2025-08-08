@@ -47,7 +47,7 @@ const OurPartners = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 300,
       easing: "ease-in-out-quart",
       once: true,
       offset: 120,

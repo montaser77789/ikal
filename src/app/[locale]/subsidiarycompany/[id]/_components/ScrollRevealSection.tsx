@@ -7,7 +7,7 @@ import { Building2 } from "lucide-react";
 export default function ScrollRevealSection() {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 300,
       once: true,
       easing: "ease-in-out-quart",
     });

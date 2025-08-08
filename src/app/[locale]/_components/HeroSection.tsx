@@ -60,10 +60,10 @@ export default function HeroSection() {
           منذ تأسيسها، تسعى شركة إيكال لتقديم أفضل الخدمات والحلول في مجال
           المقاولات، برؤية تركز على الابتكار والجودة.
         </p>
-        <div className="flex gap-6 animate-fadeIn delay-300">
+        <div className="flex gap-6 flex-col md:flex-row items-center justify-center  ">
           <Link
             href="#contact"
-            className={`!text-xl !py-5 !px-10 ${buttonVariants({
+            className={`!text-xl !py-5 !px-10 !w-full !rounded-full ${buttonVariants({
               variant: "default",
             })}`}
           >
@@ -71,7 +71,7 @@ export default function HeroSection() {
           </Link>
           <Link
             href="#about"
-            className={`!text-xl !py-5 !px-10 ${buttonVariants({
+            className={`!text-xl !py-5 !px-10 !w-full !rounded-full ${buttonVariants({
               variant: "outline",
             })}`}
           >

@@ -3,7 +3,6 @@
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import Sectiontitle from "@/components/Sectiontitle";
-import { FaCalendarAlt, FaMoneyBillWave } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -57,7 +56,7 @@ export default function ProjectsPreviewSection() {
   const { locale } = useParams();
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 300,
       once: true,
       easing: "ease-out-quad",
     });
@@ -109,7 +108,7 @@ export default function ProjectsPreviewSection() {
                     {project.description}
                   </p>
 
-                  <div className="grid grid-cols-2 gap-4 pt-4">
+                  {/* <div className="grid grid-cols-2 gap-4 pt-4">
                     <div className="bg-gray-100 p-4 rounded-lg flex items-center gap-4">
                       <div className="bg-primary/10 p-3 rounded-full">
                         <FaMoneyBillWave className="text-primary text-xl" />
@@ -129,7 +128,7 @@ export default function ProjectsPreviewSection() {
                         <p className="font-bold text-lg">{project.endDate}</p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </CardContent>
               </Card>
             </div>

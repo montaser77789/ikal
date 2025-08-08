@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 export default function HeroSection() {
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 300,
       easing: "ease-in-out-quart",
       once: true,
       mirror: false,
@@ -69,8 +69,8 @@ export default function HeroSection() {
         {/* Right Side - Text Content */}
         <div className="lg:w-2/3 w-full order-1 lg:order-1">
           <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-right">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-snug mb-6 drop-shadow-lg">
-              <span className="block mb-2 animate-fadeIn">شركه ارتكس</span>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black leading-snug mb-6 drop-shadow-lg">
+              <span className="block mb-2 mt-4 ">شركه ارتكس</span>
               <span className="text-primary bg-clip-text bg-gradient-to-r from-primary to-secondary">
                 بخبرة تزيد عن 20 عامًا
               </span>

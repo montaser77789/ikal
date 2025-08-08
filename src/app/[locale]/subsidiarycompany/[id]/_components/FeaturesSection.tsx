@@ -17,7 +17,7 @@ import { FaHandshake } from "react-icons/fa";
 
 export default function FeaturesSection({ locale }: { locale: Locale }) {
   useEffect(() => {
-    AOS.init({ duration: 800, once: true });
+    AOS.init({ duration: 300, once: true });
   }, []);
 
 const features = {
