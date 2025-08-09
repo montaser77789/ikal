@@ -35,7 +35,7 @@ const companies = [
   },
   {
     id: 4,
-    name: "شركة ARTEX",
+    name: "ارتكس للاستشارات الهندسية",
     image: patern3,
     slug: "artex",
     description: "المقاولات والإنشاءات",
