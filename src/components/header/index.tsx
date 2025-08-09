@@ -42,8 +42,8 @@ const Header = ({
               <Image
                 src={logo}
                 alt="Logo"
-                width={90}
-                height={90}
+                width={130}
+                height={130}
                 className="object-contain"
               />
             </div>

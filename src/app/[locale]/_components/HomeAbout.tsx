@@ -20,7 +20,7 @@ export default function HomeAbout() {
             <p className="text-lg md:text-xl leading-relaxed text-[#2C3E50]">
               مجموعة{" "}
               <strong className="text-primary"> &quot;إيكال &quot; </strong>{" "}
-              تأسست عام 2016 في مدينة ينبع، وتخصصت في تقديم حلول متكاملة في مجال
+              تأسست عام 2016 في مدينة الدمام وتخصصت في تقديم حلول متكاملة في مجال
               المقاولات العامة. نلتزم بأعلى معايير الجودة والسلامة لتحقيق تطلعات
               عملائنا.
             </p>

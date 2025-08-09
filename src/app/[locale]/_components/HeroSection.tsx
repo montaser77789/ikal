@@ -19,7 +19,7 @@ const slides = [image1, image2, image3];
 
 export default function HeroSection() {
   return (
-    <div className="relative h-screen w-full overflow-hidden" >
+    <div className="relative h-screen w-full overflow-hidden">
       {/* Swiper background images */}
       <Swiper
         modules={[Autoplay, EffectFade]}
@@ -29,7 +29,7 @@ export default function HeroSection() {
         }}
         effect="fade"
         fadeEffect={{
-          crossFade: true // تأثير تدرج متقاطع
+          crossFade: true, // تأثير تدرج متقاطع
         }}
         speed={1500} // زدت مدة الانتقال بين الشرائح
         loop
@@ -57,23 +57,27 @@ export default function HeroSection() {
           مجموعه إيكال
         </h2>
         <p className="text-[18px] md:text-[30px] lg:text-[40px] max-w-4xl leading-relaxed mb-10 animate-fadeIn delay-200">
-          منذ تأسيسها، تسعى شركة إيكال لتقديم أفضل الخدمات والحلول في مجال
-          المقاولات، برؤية تركز على الابتكار والجودة.
+          نسعى من خلال خبراتنا المتنوعة ورؤيتنا المبتكرة إلى تقديم خدمات عالية
+          الجودة تدعم تطلعات عملائنا وتسهم في بناء مستقبل مستدام.
         </p>
         <div className="flex gap-6 flex-col md:flex-row items-center justify-center  ">
           <Link
             href="#contact"
-            className={`!text-xl !py-5 !px-10 !w-full !rounded-full ${buttonVariants({
-              variant: "default",
-            })}`}
+            className={`!text-xl !py-5 !px-10 !w-full !rounded-full ${buttonVariants(
+              {
+                variant: "default",
+              }
+            )}`}
           >
             تواصل معنا
           </Link>
           <Link
             href="#about"
-            className={`!text-xl !py-5 !px-10 !w-full !rounded-full ${buttonVariants({
-              variant: "outline",
-            })}`}
+            className={`!text-xl !py-5 !px-10 !w-full !rounded-full ${buttonVariants(
+              {
+                variant: "outline",
+              }
+            )}`}
           >
             عن الشركة
           </Link>
