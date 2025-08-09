@@ -89,9 +89,9 @@ const Navbar = ({
                  `}
               >
                 {link.title}
-                {["خدماتنا", "مشاريعنا", "Services", "Projects"].includes(
+                {/* {["خدماتنا", "مشاريعنا", "Services", "Projects"].includes(
                   link.title
-                ) && <FaChevronDown className="mr-1 text-xs" />}
+                ) && <FaChevronDown className="mr-1 text-xs" />} */}
               </Link>
             </li>
           ))}

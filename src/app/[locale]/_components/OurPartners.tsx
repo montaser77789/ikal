@@ -118,18 +118,7 @@ const OurPartners = () => {
           ))}
         </div>
 
-        <div
-          className="text-center mt-16"
-          data-aos="fade-up"
-          data-aos-delay="500"
-        >
-          <a
-            href={`/${locale}/about`}
-            className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
-          >
-            تعرف أكثر على مجموعة إيكال
-          </a>
-        </div>
+
       </div>
     </section>
   );

@@ -1,8 +1,16 @@
 "use client";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Send,
+  MessageCircle,
+  ArrowLeft,
+} from "lucide-react";
 import contactImage from "../../../../public/contact/elegant-man-talking-phone-low-angle-shot (1).jpg";
 import Image from "next/image";
 
@@ -46,7 +54,7 @@ export default function ContactPage() {
       details: (
         <>
           <p>المملكة العربية السعودية</p>
-          <p>المدينة: بقيق</p>
+          <p>المدينة: الدمام</p>
           <p>صندوق البريد: 4912</p>
           <p>الرمز البريدي: 33261</p>
         </>
@@ -58,12 +66,6 @@ export default function ContactPage() {
       details: "الأحد - الخميس: 8 صباحاً - 5 مساءً",
     },
   ];
-
-  return (
-    <h1 className="text-2xl flex items-center justify-center h-screen">
-      جاري العمل عليها وستظهر قريبا ....
-    </h1>
-  );
 
   return (
     <div className="bg-white">
@@ -85,13 +87,13 @@ export default function ContactPage() {
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-4">تواصل معنا</h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto">
-            نحن هنا لمساعدتك في أي استفسار أو طلب
+            نحن نقدم حلولاً هندسية متكاملة تجمع بين الإبداع والدقة لتحقيق رؤيتك
           </p>
         </div>
       </section>
 
       {/* Form + Map */}
-      <section className="py-20 ">
+      <section className="py-8 ">
         <div className="container grid lg:grid-cols-2 gap-10">
           {/* Contact Form */}
           <div
@@ -99,8 +101,11 @@ export default function ContactPage() {
             data-aos="fade-right"
           >
             <h2 className="text-2xl font-bold text-gray-900 mb-8">
-              أرسل رسالة
+              لديك سؤال، اقتراح أو شكوى ؟
             </h2>
+            <p className="text-gray-600 mb-8">
+              يرجى ملء النموذج أدناه وسنقوم بالرد عليك في أقرب وقت ممكن.
+            </p>
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -193,7 +198,7 @@ export default function ContactPage() {
             data-aos="fade-left"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.1868735000006!2d46.67278231500049!3d24.83145598407084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee3e9b4b92a9f%3A0xe8a3a5c5d9a3f1d5!2sRiyadh!5e0!3m2!1sen!2ssa!4v1620000000000!5m2!1sen!2ssa"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27321.298837988943!2d30.65112675!3d31.133005599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f65b0d3ffa59bb%3A0x492dc14ca6f9c613!2z2K_Ys9mI2YLYjCDZg9mB2LEg2KXYqNix2KfZh9mK2YXYjCDZgtiz2YUg2K_Ys9mI2YLYjCDZhdit2KfZgdi42Kkg2YPZgdixINin2YTYtNmK2K4!5e0!3m2!1sar!2seg!4v1754767298097!5m2!1sar!2seg"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: "450px" }}
@@ -201,31 +206,73 @@ export default function ContactPage() {
               loading="lazy"
               title="موقع شركة إيكال على الخريطة"
             ></iframe>
+
+      
           </div>
         </div>
       </section>
 
-      {/* Contact Info Cards */}
-      <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {contactInfo.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-lg p-6 text-center"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-            >
-              <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 text-primary flex items-center justify-center">
-                {item.icon}
+      {/* Modern Contact Info Section */}
+      <section className="relative py-8 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-secondary rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+        </div>
+
+        <div className="container  relative z-10">
+          {/* Section header */}
+          <div className="text-center mb-10" data-aos="fade-up">
+            <span className="inline-block px-5 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4 tracking-wider">
+              تواصل معنا
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              طرق <span className="text-primary">التواصل</span>
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              نحن هنا لمساعدتك في أي استفسار أو طلب
+            </p>
+          </div>
+
+          {/* Contact cards grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {contactInfo.map((item, index) => (
+              <div
+                key={index}
+                className="group relative bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                {/* Card background effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50 opacity-90 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                {/* Decorative accent */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary"></div>
+
+                {/* Card content */}
+                <div className="relative p-8 text-center h-full flex flex-col items-center">
+                  {/* Icon with modern background */}
+                  <div className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 text-primary flex items-center justify-center transform transition-all duration-500 group-hover:rotate-6 group-hover:scale-110">
+                    {React.cloneElement(item.icon, { className: "w-6 h-6" })}
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {item.title}
+                  </h3>
+
+                  {/* Details with hover effect */}
+                  <div className="text-gray-600 leading-relaxed transition-colors duration-300 group-hover:text-gray-800">
+                    {typeof item.details === "string" ? (
+                      <p>{item.details}</p>
+                    ) : (
+                      item.details
+                    )}
+                  </div>
+                </div>
               </div>
-              <h3 className="font-semibold text-lg text-gray-900 mb-2">
-                {item.title}
-              </h3>
-              <div className="text-gray-600 text-sm leading-relaxed">
-                {item.details}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
     </div>

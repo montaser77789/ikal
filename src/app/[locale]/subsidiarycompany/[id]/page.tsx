@@ -18,8 +18,8 @@ export default async function page() {
       <ServicesSection />
       <FeaturesSection  locale={locale}/>
       <ProjectsPreviewSection />
-      <PartnersSection locale={locale} />
       <ScrollRevealSection />
+      <PartnersSection locale={locale} />
       <CTASection />
     </div>
   )
