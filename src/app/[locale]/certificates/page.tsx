@@ -5,7 +5,18 @@ import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Zoom } from "swiper/modules";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Info, Check, FileText, Shield, ClipboardList, Users, FileBadge, Award } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Info,
+  Check,
+  FileText,
+  Shield,
+  ClipboardList,
+  Users,
+  FileBadge,
+  Award,
+} from "lucide-react";
 import certificate1 from "../../../../public/certificates/Screenshot 2025-08-08 031138.png";
 import certificate2 from "../../../../public/certificates/Screenshot 2025-08-08 031155.png";
 import certificate3 from "../../../../public/certificates/Screenshot 2025-08-08 031208.png";
@@ -59,6 +70,12 @@ export default function CertificatesGallery() {
   };
 
   return (
+    <h1 className="text-2xl flex items-center justify-center h-screen">
+      جاري العمل عليها وستظهر قريبا ....
+    </h1>
+  );
+
+  return (
     <div className="bg-white">
       {/* Hero Banner Section */}
       <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center">
@@ -72,19 +89,21 @@ export default function CertificatesGallery() {
             priority
           />
         </div>
-        
+
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
-        
+
         {/* Content */}
-        <div className="relative container mx-auto px-4 text-center text-white z-10" data-aos="fade-up">
+        <div
+          className="relative container mx-auto px-4 text-center text-white z-10"
+          data-aos="fade-up"
+        >
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             الشهادات والاعتمادات
           </h1>
           <p className="text-xl md:text-2xl max-w-2xl mx-auto mb-8">
             وثائق رسمية تثبت مصداقية مجموعة إيكال وتميزها في السوق
           </p>
-
         </div>
       </section>
 
@@ -183,7 +202,10 @@ export default function CertificatesGallery() {
           </div>
 
           {/* Certificate Details */}
-          <div className="mt-12 bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-aos="fade-up">
+          <div
+            className="mt-12 bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100"
+            data-aos="fade-up"
+          >
             <div className="grid md:grid-cols-2 divide-x divide-gray-100">
               <div className="p-8 md:p-10 bg-gradient-to-br from-gray-50 to-white">
                 <div className="flex items-start gap-4 mb-6">
@@ -194,10 +216,12 @@ export default function CertificatesGallery() {
                     <h2 className="text-2xl font-bold text-gray-900">
                       أهمية <span className="text-primary">الشهادات</span>
                     </h2>
-                    <p className="text-gray-500 mt-1">لماذا تعتبر هذه الشهادات أساسية لأعمالنا؟</p>
+                    <p className="text-gray-500 mt-1">
+                      لماذا تعتبر هذه الشهادات أساسية لأعمالنا؟
+                    </p>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-4">
                   {[
                     "ضمان الجودة والالتزام بالمعايير الدولية",
@@ -205,13 +229,15 @@ export default function CertificatesGallery() {
                     "متطلبات قانونية معتمدة من جهات المملكة الرسمية",
                     "دليل على الاحترافية والموثوقية في السوق",
                     "تميز تنافسي في مجال الإنشاءات والمقاولات",
-                    "التزام بمعايير السلامة والاستدامة"
+                    "التزام بمعايير السلامة والاستدامة",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-4 group">
                       <div className="flex-shrink-0 mt-1 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
                         <Check className="w-3 h-3" />
                       </div>
-                      <span className="text-gray-700 group-hover:text-gray-900 transition-colors">{item}</span>
+                      <span className="text-gray-700 group-hover:text-gray-900 transition-colors">
+                        {item}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -223,34 +249,48 @@ export default function CertificatesGallery() {
                     <FileBadge className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">تفاصيل الشهادات</h3>
-                    <p className="text-gray-500 mt-1">الوثائق الرسمية المعتمدة لشركة إيكال</p>
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      تفاصيل الشهادات
+                    </h3>
+                    <p className="text-gray-500 mt-1">
+                      الوثائق الرسمية المعتمدة لشركة إيكال
+                    </p>
                   </div>
                 </div>
 
                 <div className="space-y-6">
                   {certificates.map((cert) => (
-                    <div 
-                      key={cert.id} 
+                    <div
+                      key={cert.id}
                       className="p-4 rounded-lg hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100"
                     >
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0 p-2 bg-primary/10 rounded-lg text-primary">
                           {cert.id === 1 && <FileText className="w-5 h-5" />}
                           {cert.id === 2 && <Shield className="w-5 h-5" />}
-                          {cert.id === 3 && <ClipboardList className="w-5 h-5" />}
+                          {cert.id === 3 && (
+                            <ClipboardList className="w-5 h-5" />
+                          )}
                           {cert.id === 4 && <Users className="w-5 h-5" />}
                         </div>
                         <div>
                           <h4 className="font-semibold text-gray-900 flex items-center gap-2">
                             {cert.title}
-                            <span className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full">معتمد</span>
+                            <span className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full">
+                              معتمد
+                            </span>
                           </h4>
-                          <p className="text-sm text-gray-600 mt-1">{cert.description}</p>
+                          <p className="text-sm text-gray-600 mt-1">
+                            {cert.description}
+                          </p>
                           <div className="mt-2 flex items-center gap-2">
-                            <span className="text-xs text-gray-500">تاريخ الإصدار: 01/01/2023</span>
+                            <span className="text-xs text-gray-500">
+                              تاريخ الإصدار: 01/01/2023
+                            </span>
                             <span className="text-xs text-gray-500">•</span>
-                            <span className="text-xs text-gray-500">ساري حتى: 01/01/2025</span>
+                            <span className="text-xs text-gray-500">
+                              ساري حتى: 01/01/2025
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -279,7 +319,7 @@ export default function CertificatesGallery() {
           padding: 4px 8px;
           border-radius: 12px;
           font-size: 14px;
-          background: rgba(255,255,255,0.2);
+          background: rgba(255, 255, 255, 0.2);
           color: #fff;
           opacity: 1;
         }

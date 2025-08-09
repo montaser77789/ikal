@@ -5,17 +5,17 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Globe, ArrowRight } from "lucide-react";
-import patern1 from  "../../../../public/logoo.png";
-import patern2 from "../../../../public/Our paterns/Screenshot_2025-08-07_023248-removebg-preview.png";
+import patern1 from  "../../../../public/Our paterns/Ikal-Group.png";
+import patern2 from "../../../../public/Our paterns/Ikal-Group.png";
 import patern3 from "../../../../public/Our paterns/artex.png";
-import patern4 from "../../../../public/logoo.png";
+import patern4 from "../../../../public/Our paterns/مدماك-الخليج-العقارية.png";
 import Link from "@/components/link/Link";
 
 const companies = [
   {
     id: 1,
     name: "ايكال المتحدة للمقاولات",
-    image: patern4,
+    image: patern2,
     slug: "rg",
     description: "الحلول الهندسية المتكاملة",
   },
@@ -28,8 +28,8 @@ const companies = [
   },
   {
     id: 3,
-    name: "مدماك الخليج للتطوير العقاري",
-    image: patern2,
+    name: "مدماك الخليج",
+    image: patern4,
     slug: "ikal-trading",
     description: "التوريدات والخدمات التجارية",
   },

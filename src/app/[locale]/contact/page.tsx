@@ -60,6 +60,12 @@ export default function ContactPage() {
   ];
 
   return (
+    <h1 className="text-2xl flex items-center justify-center h-screen">
+      جاري العمل عليها وستظهر قريبا ....
+    </h1>
+  );
+
+  return (
     <div className="bg-white">
       {/* Hero Banner */}
       <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center">
@@ -84,7 +90,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-            {/* Form + Map */}
+      {/* Form + Map */}
       <section className="py-20 ">
         <div className="container grid lg:grid-cols-2 gap-10">
           {/* Contact Form */}
@@ -222,8 +228,6 @@ export default function ContactPage() {
           ))}
         </div>
       </section>
-
-
     </div>
   );
 }

@@ -21,6 +21,9 @@ export default function AboutPage() {
       offset: 100
     });
   }, []);
+  return (
+    <h1 className="text-2xl flex items-center justify-center h-screen">جاري العمل عليها وستظهر قريبا ....</h1>
+  )
 
   return (
     <div className="bg-white">
@@ -70,7 +73,7 @@ export default function AboutPage() {
                 </div>
                 <div className="space-y-6 text-gray-600 leading-relaxed">
                   <p className="italic text-lg">
-                    "السلام عليكم ورحمة الله وبركاته"
+                    &quot;السلام عليكم ورحمة الله وبركاته&quot;
                   </p>
                   <p>
                     يسعدني أن أرحب بكم في هذا الكتيب الذي يسلط الضوء على مسيرة شركتنا وإنجازاتنا في مجال المقاولات. منذ تأسيسها، إيكال تسعى دائماً لتقديم أفضل الخدمات التي تلبي توقعات عملائنا.
