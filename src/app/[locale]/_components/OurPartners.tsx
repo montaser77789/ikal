@@ -5,7 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Globe, ArrowRight } from "lucide-react";
-import patern1 from  "../../../../public/Our paterns/logoo.png";
+import patern1 from "../../../../public/Our paterns/logoo.png";
 import patern2 from "../../../../public/Our paterns/logoo.png";
 import patern3 from "../../../../public/Our paterns/artex.png";
 import patern4 from "../../../../public/Our paterns/مدماك-الخليج-العقارية.png";
@@ -28,7 +28,7 @@ const companies = [
   },
   {
     id: 3,
-    name: "مدماك الخليج",
+    name: "مدماك الخليج العقارية ",
     image: patern4,
     slug: "ikal-trading",
     description: "التوريدات والخدمات التجارية",
@@ -87,12 +87,13 @@ const OurPartners = () => {
               >
                 <div className="h-full bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200  hover:shadow-xl transition-all duration-300">
                   {/* Company Logo */}
-                  <div className="relative min-h-40 bg-gray-100 flex items-center justify-center ">
+                  <div className="relative w-full h-32 bg-gray-100 flex items-center justify-center">
                     <Image
                       src={company.image}
                       alt={company.name}
-                  
-                      className="object-contain w-auto transition-transform duration-500 group-hover:scale-105 group-hover:rotate-0"
+                      width={160}
+                      height={160}
+                      className="object-contain max-w-full max-h-full transition-transform duration-500 group-hover:scale-105 group-hover:rotate-0"
                     />
                   </div>
 
