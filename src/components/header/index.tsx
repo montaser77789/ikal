@@ -34,16 +34,16 @@ const Header = ({
       }`}
     >
 
-      <div className="container  flex justify-between items-center py-3">
+      <div className="container  flex justify-between items-center py-1">
         {/* Logo */}
         <div className="flex items-center">
-          <div className="p-1 rounded-full">
+          <div className=" rounded-full">
             <div className="">
               <Image
                 src={logo}
                 alt="Logo"
-                width={110}
-                height={110}
+                width={130}
+                height={130}
                 className="object-contain"
               />
             </div>
